@@ -1,0 +1,14 @@
+body {
+  height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0rem;
+  background-image: url(flat-lay-green-vegetables-fruits.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(100%);
+  
+}
+
+
