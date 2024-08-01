@@ -5,11 +5,13 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import styles from './Header.module.css';
+import {Link} from 'react-router-dom';
+
 function Header() {
   return (
     <Navbar sticky="top" collapseOnSelect expand="lg" className="bg-body-tertiary sticky-top" className={styles.body}>
       <Container className={styles.body}>
-        <Navbar.Brand href="#home"><img style={{width:70}} src="logo.webp" alt="logo" /></Navbar.Brand>
+        <Navbar.Brand ><Link to='/'><img style={{width:70}} src="logo.webp" alt="logo" /></Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           
@@ -22,10 +24,10 @@ function Header() {
             />
             <Button className={styles.btn} variant="outline-success">Search</Button>
           </Form>
-          <Nav className="ms-auto">
-            <Nav.Link href="#cart">Cart</Nav.Link>
-            <Nav.Link href="#login">Login</Nav.Link>
-            
+          <Nav className="ms-auto ">
+            <Link to="/cart" className={styles.link}>Cart</Link>
+            <Link to="/Login" className={styles.link}>Login</Link>
+            <Link to="/orderhistory" className={styles.link}>OrderHistory</Link>
             
           </Nav>
         </Navbar.Collapse>

@@ -6,3 +6,10 @@
     border-color: lightgreen;
     color: lightgreen;
 }
+
+.link{
+    text-decoration: none;
+    color: whitesmoke;
+    margin-right: 10px;
+}
+

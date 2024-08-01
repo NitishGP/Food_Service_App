@@ -1,6 +1,6 @@
 function Footer(){
     return(
-        <p style={{textAlign:"center",}}>Food Delivery Website - 2023-2024 All Rights Reserved.</p>
+        <p style={{textAlign:"center",}}><b>Food Delivery Website - 2023-2024 All Rights Reserved.</b> </p>
     )
 }
 

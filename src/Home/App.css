@@ -1,14 +1,25 @@
-body {
-  height: 100vh;
-  max-width: 1280px;
+html,body {
+  height: 100%;
+  width: 100%;
   margin: 0 auto;
   padding: 0rem;
-  background-image: url(flat-lay-green-vegetables-fruits.jpg);
-  background-position: center;
+  background-image:url(flat-lay-green-vegetables-fruits.jpg);
+  
   background-repeat: no-repeat;
   background-size: cover;
   filter: brightness(100%);
   
+  
 }
 
+.btn{
+  border-width: 2px;
+  border-radius: 10%;
+  border-style: solid;
+}
 
+.wrapper{
+  margin:0rem 15rem 0rem 15rem;
+  padding: 5rem;
+  
+}

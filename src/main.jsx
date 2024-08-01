@@ -3,29 +3,69 @@ import ReactDOM from 'react-dom/client'
 import Menu from './Card/Menu'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap/dist/js/bootstrap.bundle.min";
-
+import Header from "./Header/Header";
 import './index.css'
-import Footer from './Footer/Footer'
-import Header from './Header/Header';
 import App from './Home/App';
-import Container from 'react-bootstrap/Container';
+import OrderDetails from './order/OrderDetails';
+import ListOrders from "./order/ListOrders"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import Login from './users/Login/Login';
+import ForgotPassword from './users/ForgotPassword';
+import Register from './users/Register/Register';
+import NewPassword from './users/NewPassword';
+import Cart from './cart/Cart';
+import OrderSuccess from './cart/OrderSuccess';
 
-
-
-
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    errorElement: <div>404 Not Found</div>
+  },
+  {
+    path: '/orders',
+    element: <OrderDetails />,
+    errorElement: <div>Orders not found!</div>
+  },
+  {
+    path:'/login',
+    element:<Login/>,
+    errorElement:<div>Login not found!</div>
+  },
+  {
+    path:'/forgotpassword',
+    element:<ForgotPassword/>
+  },
+  {
+    path:'/newuser',
+    element:<Register/>
+  },
+  {
+    path:'/newpass',
+    element:<NewPassword/>
+  },
+  {
+    path:'/cart',
+    element:<Cart/>
+  },
+  {
+    path:'/ordersuccess',
+    element:<OrderSuccess/>
+  },
+  {
+    path:'/orderhistory',
+    element:<ListOrders/>
+  }
+]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Header />
+  <>
+    
+    <React.StrictMode>
+      
+      <RouterProvider router={router} />
+     
+    </React.StrictMode>,
+  </>
 
-    <App />
-    <Container className='d-flex flex-row align-items-center justify-content-center'>
-      <Menu />
-      <Menu />
-      <Menu />
-      <Menu />
-    </Container>
-
-    <Footer />
-  </React.StrictMode>,
 )
