@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Menu from './Card/Menu'
+import Restaurant from './Card/Restaurant'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import Header from "./Header/Header";
@@ -15,6 +15,7 @@ import Register from './users/Register/Register';
 import NewPassword from './users/NewPassword';
 import Cart from './cart/Cart';
 import OrderSuccess from './cart/OrderSuccess';
+import ForMenu from './Home/ForMenu';
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
   {
     path:'/orderhistory',
     element:<ListOrders/>
+  },
+  {
+    path:'/menu',
+    element:<ForMenu/>
   }
 ]);
 

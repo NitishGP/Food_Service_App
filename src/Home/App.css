@@ -3,9 +3,13 @@ html,body {
   width: 100%;
   margin: 0 auto;
   padding: 0rem;
-  background-image:url(flat-lay-green-vegetables-fruits.jpg);
+  background-image:linear-gradient(
+    0deg,
+    rgba(250, 250, 250, 0.801),
+    rgba(250, 250, 250, 0.836)
+  ),url(flat-lay-green-vegetables-fruits.jpg);
   
-  background-repeat: no-repeat;
+
   background-size: cover;
   filter: brightness(100%);
   
